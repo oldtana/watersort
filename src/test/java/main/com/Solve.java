@@ -1,7 +1,6 @@
 package main.com;
 
 import java.util.*;
-import main.com.Move;
 public class Solve {
 
     public List<Move> solve(int[][] initialTubes) {
@@ -19,7 +18,7 @@ public class Solve {
             }
             for (int from = 0; from < current.tubes.length; from++) {
                 for (int to = 0; to < current.tubes.length; to++) {
-                    if (from == to) continue; // нельза в ту же пробирку
+                    if (from == to) continue;
 
                     Move move = new Move(from, to);
                     State nextState = current.addMove(move);

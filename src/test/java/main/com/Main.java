@@ -4,7 +4,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[][] begin = generateFirstState(10, 3, 12);
+        System.out.println("Введите количество цветов ");
+        Scanner scanner= new Scanner(System.in);
+        int colors=scanner.nextInt();
+        System.out.println("Введите объем ");
+        int volume=scanner.nextInt();
+        System.out.println("Введите количество пробирок ");
+        int tubeCount=scanner.nextInt();
+        int[][] begin = generateFirstState(colors, volume, tubeCount);
         Solve solver = new Solve();
         List<Move> solution = solver.solve(begin);
         if (solution != null) {
